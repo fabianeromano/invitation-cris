@@ -1,9 +1,12 @@
 <section class="hero-section relative min-h-screen bg-hero-image">
   <div
-    class="absolute inset-0 z-0 bg-cover bg-center bg-hero-image brightness-75"
+    class="absolute inset-0 z-0 bg-cover bg-center bg-hero-image brightness-75 imagen-wine"
     role="img"
     aria-label="Background image">
   </div>
+  <!-- <div class="absolute inset-0 z-0 brightness-75 h-screen">
+    <img class="imagen-wine" src="/images/wine.jpg" alt="" />
+  </div> -->
 
   <!-- Navigation -->
   <nav class="relative h-24 z-10 flex justify-between items-start px-4 py-2">
@@ -18,7 +21,7 @@
   <!-- Menu Overlay -->
   <div
     id="menuOverlay"
-    class="fixed inset-0 bg-black bg-opacity-90 z-20 items-start justify-between hidden max-w-md mx-auto">
+    class="fixed inset-0 bg-black bg-opacity-90 z-20 flex-col items-center justify-start hidden max-w-md mx-auto">
     <!-- <button
       id="closeMenu"
       class="absolute top-6 right-6 text-white">
@@ -58,6 +61,15 @@
         <p class="text-xl font-bold rotate-90">CLOSE</p>
       </button>
     </nav>
+    <div
+      class="flex flex-col items-start justify-center relative text-white w-full px-5">
+      <h3 class="text-5xl font-bold">CONTACTO</h3>
+      <div class="flex justify-start items-center gap-2">
+        <p class="text-sm font-bold">WHATSAPP</p>
+        <p class="text-sm font-bold">INSTAGRAM</p>
+        <p class="text-sm font-bold">FACEBOOK</p>
+      </div>
+    </div>
   </div>
   <div class="relative">
     <h2 class="text-8xl text-white great-vibes-regular">Cumple</h2>
@@ -152,6 +164,10 @@
     background-image: url("/images/wine.jpg");
   }
 
+  .imagen-wine {
+    mask-image: linear-gradient(black 98%, transparent);
+  }
+
   #menuOverlay {
     display: none;
   }
@@ -164,6 +180,7 @@
 <script>
   // Audio setup
   const audio = new Audio("/music/iFollowRivers.mp3");
+  audio.autoplay = true;
   audio.loop = true;
 
   // Menu functionality
