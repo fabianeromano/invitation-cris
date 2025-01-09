@@ -1,6 +1,10 @@
+---
+
+---
+
 <section class="hero-section relative min-h-screen bg-hero-image">
   <div
-    class="absolute inset-0 z-0 bg-cover bg-center bg-hero-image brightness-75 imagen-wine"
+    class="absolute inset-0 z-0 bg-cover bg-center bg-hero-image brightness-75"
     role="img"
     aria-label="Background image">
   </div>
@@ -62,13 +66,25 @@
       </button>
     </nav>
     <div
-      class="flex flex-col items-start justify-center relative text-white w-full px-5">
+      class="flex flex-col items-start justify-center relative text-white w-full px-5 gap-4">
       <h3 class="text-5xl font-bold">CONTACTO</h3>
-      <div class="flex justify-start items-center gap-2">
-        <p class="text-sm font-bold">WHATSAPP</p>
-        <p class="text-sm font-bold">INSTAGRAM</p>
-        <p class="text-sm font-bold">FACEBOOK</p>
-      </div>
+      <ul class="flex justify-start items-center gap-4">
+        <li>
+          <a class="text-sm font-bold hover:text-gray-400 cursor-pointer">
+            WHATSAPP
+          </a>
+        </li>
+        <li>
+          <a class="text-sm font-bold hover:text-gray-400 cursor-pointer">
+            INSTAGRAM
+          </a>
+        </li>
+        <li>
+          <a class="text-sm font-bold hover:text-gray-400 cursor-pointer">
+            FACEBOOK
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div class="relative">
@@ -76,7 +92,7 @@
     <h2 class="text-8xl text-white great-vibes-regular">Cris</h2>
   </div>
 
-  <div
+  <!-- <div
     class="absolute bottom-5 left-5 h-[155px] w-[155px] bg-[#292730]/50 rounded-[20px] flex justify-between items-center px-4 py-4">
     <div class="flex flex-col">
       <div class="h-[82px] w-[82px] bg-gray-500 rounded-lg">
@@ -112,7 +128,7 @@
         </defs>
       </svg>
       <!-- Music Control Button -->
-      <button id="musicToggle" aria-label="Toggle music">
+  <!-- <button id="musicToggle" aria-label="Toggle music">
         <svg
           id="pauseIcon"
           width="40"
@@ -149,6 +165,18 @@
         </svg>
       </button>
     </div>
+  </div> -->
+  <div class="w-full h-[155px] absolute bottom-0 left-0">
+    <div class="relative w-full h-full flex justify-center items-center">
+      <button id="playButton" class="text-white font-bold z-10 h-full w-[155px]"
+        >Play Music</button
+      >
+      <img
+        class="h-[155px] w-[155px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        src="/images/burbuja.png"
+        alt="bubble"
+      />
+    </div>
   </div>
 </section>
 <style>
@@ -164,10 +192,6 @@
     background-image: url("/images/wine.jpg");
   }
 
-  .imagen-wine {
-    mask-image: linear-gradient(black 98%, transparent);
-  }
-
   #menuOverlay {
     display: none;
   }
@@ -179,9 +203,9 @@
 
 <script>
   // Audio setup
-  const audio = new Audio("/music/iFollowRivers.mp3");
-  audio.autoplay = true;
-  audio.loop = true;
+  //const audio = new Audio("/music/iFollowRivers.mp3");
+  //audio.autoplay = true;
+  //audio.loop = true;
 
   // Menu functionality
   const menuButton = document.getElementById("menuButton");
@@ -197,43 +221,63 @@
   });
 
   // Music functionality
-  const musicToggle = document.getElementById("musicToggle");
-  const playIcon = document.getElementById("playIcon");
-  const pauseIcon = document.getElementById("pauseIcon");
-  let isPlaying = true;
+  // const musicToggle = document.getElementById("musicToggle");
+  // const playIcon = document.getElementById("playIcon");
+  // const pauseIcon = document.getElementById("pauseIcon");
+  // let isPlaying = true;
 
   // Start playing music when the page loads
-  window.addEventListener("load", () => {
-    audio.play().catch(() => {
-      // Handle autoplay restrictions
-      isPlaying = false;
-      updateMusicIcon();
-    });
-  });
+  // window.addEventListener("load", () => {
+  //   audio.play().catch(() => {
+  //     // Handle autoplay restrictions
+  //     isPlaying = false;
+  //     updateMusicIcon();
+  //   });
+  // });
 
-  musicToggle?.addEventListener("click", () => {
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
-    }
-    isPlaying = !isPlaying;
-    updateMusicIcon();
-  });
+  // musicToggle?.addEventListener("click", () => {
+  //   if (isPlaying) {
+  //     audio.pause();
+  //   } else {
+  //     audio.play();
+  //   }
+  //   isPlaying = !isPlaying;
+  //   updateMusicIcon();
+  // });
 
-  function updateMusicIcon() {
-    if (isPlaying) {
-      playIcon?.classList.add("hidden");
-      pauseIcon?.classList.remove("hidden");
-    } else {
-      playIcon?.classList.remove("hidden");
-      pauseIcon?.classList.add("hidden");
-    }
-  }
+  // function updateMusicIcon() {
+  //   if (isPlaying) {
+  //     playIcon?.classList.add("hidden");
+  //     pauseIcon?.classList.remove("hidden");
+  //   } else {
+  //     playIcon?.classList.remove("hidden");
+  //     pauseIcon?.classList.add("hidden");
+  //   }
+  // }
 
   // Clean up on page unload
-  window.addEventListener("unload", () => {
-    audio.pause();
-    audio.src = "";
+  // window.addEventListener("unload", () => {
+  //   audio.pause();
+  //   audio.src = "";
+  // });
+  const playButton = document.getElementById("playButton")!;
+  const audio = new Audio("music/iFollowRivers.mp3"); // Cambia esta ruta
+  let isPlaying = false;
+
+  playButton.addEventListener("click", function () {
+    if (isPlaying) {
+      audio.pause();
+      playButton.textContent = "Play Music";
+    } else {
+      audio.play();
+      playButton.textContent = "Pause Music";
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // Cuando la música termina
+  audio.addEventListener("ended", function () {
+    isPlaying = false;
+    playButton.textContent = "Play Music";
   });
 </script>
