@@ -1,68 +1,36 @@
----
-
----
-
-<section class="hero-section relative min-h-screen bg-hero-image">
+<section class="hero-section relative min-h-screen bg-hero-image px-10">
   <div
     class="absolute inset-0 z-0 bg-cover bg-center bg-hero-image brightness-75"
     role="img"
     aria-label="Background image">
   </div>
-  <!-- <div class="absolute inset-0 z-0 brightness-75 h-screen">
-    <img class="imagen-wine" src="/images/wine.jpg" alt="" />
-  </div> -->
 
   <!-- Navigation -->
-  <nav class="relative h-24 z-10 flex justify-between items-start px-4 py-2">
+  <nav class="relative h-24 z-10 flex justify-between items-start py-2">
     <h1 class="text-xl font-bold text-white">Cris Pisculichi</h1>
     <button
       id="menuButton"
       class="text-white flex justify-center items-center h-full w-5">
-      <p class="text-xl font-bold rotate-90">MENU</p>
+      <p class="text-xl font-bold rotate-90 hover:text-gray-400 cursor-pointer">
+        MENU
+      </p>
     </button>
   </nav>
 
   <!-- Menu Overlay -->
   <div
     id="menuOverlay"
-    class="fixed inset-0 bg-black bg-opacity-90 z-20 flex-col items-center justify-start hidden max-w-md mx-auto">
-    <!-- <button
-      id="closeMenu"
-      class="absolute top-6 right-6 text-white">
-      <span class="text-xl font-bold rotate-90">CERRAR</span>
-    </button> -->
-    <!-- <nav class="text-center">
-      <ul class="space-y-6">
-        <li>
-          <a
-            href="#inicio"
-            class="text-white text-2xl hover:text-gray-300 transition-colors">
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a
-            href="#misa"
-            class="text-white text-2xl hover:text-gray-300 transition-colors">
-            Misa
-          </a>
-        </li>
-        <li>
-          <a
-            href="#merienda"
-            class="text-white text-2xl hover:text-gray-300 transition-colors">
-            Merienda
-          </a>
-        </li>
-      </ul>
-    </nav> -->
+    class="fixed inset-0 bg-black bg-opacity-90 z-20 flex-col items-center justify-start hidden max-w-md mx-auto px-10">
     <nav
-      class="relative w-full h-24 z-10 flex justify-between items-start px-4 py-2">
+      class="relative w-full h-24 z-10 flex justify-between items-start py-2">
       <h1 class="text-xl font-bold text-white">Cris Pisculichi</h1>
       <button
         id="closeMenu"
         class="text-white flex justify-center items-center h-full w-5">
-        <p class="text-xl font-bold rotate-90">CLOSE</p>
+        <p
+          class="text-xl font-bold rotate-90 hover:text-gray-400 cursor-pointer">
+          CLOSE
+        </p>
       </button>
     </nav>
     <div
@@ -88,84 +56,10 @@
     </div>
   </div>
   <div class="relative">
-    <h2 class="text-8xl text-white great-vibes-regular">Cumple</h2>
-    <h2 class="text-8xl text-white great-vibes-regular">Cris</h2>
+    <h2 class="text-9xl text-white great-vibes-regular">Cumple</h2>
+    <h2 class="text-9xl text-white great-vibes-regular">Cris</h2>
   </div>
 
-  <!-- <div
-    class="absolute bottom-5 left-5 h-[155px] w-[155px] bg-[#292730]/50 rounded-[20px] flex justify-between items-center px-4 py-4">
-    <div class="flex flex-col">
-      <div class="h-[82px] w-[82px] bg-gray-500 rounded-lg">
-        <img src="/images/woundedRhymes.jpg" alt="Image Album" />
-      </div>
-      <p class="text-xs text-white">I Follow Rivers</p>
-      <p class="text-[15px] font-semibold text-[#DB0083]">Lykke Li</p>
-    </div>
-    <div class="flex flex-col justify-between items-center h-full">
-      <svg
-        width="24"
-        height="29"
-        viewBox="0 0 24 29"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M23.3952 19.8906C23.3952 22.9056 21.7324 25.4406 17.8452 25.4406C15.9398 25.4406 14.3952 23.9114 14.3952 21.9906C14.3952 20.0698 15.9246 18.5406 17.8452 18.5406C19.8134 18.5406 21.5952 17.7915 21.5952 16.8129V7.02013L9.60001 9.1352V22.3181C9.60001 25.3331 7.9372 27.8681 4.05001 27.8681C2.14462 27.8681 0.600006 26.3389 0.600006 24.4181C0.600006 22.4973 2.12939 20.9681 4.05001 20.9681C6.01824 20.9681 7.80001 20.219 7.80001 19.2403V3.7577C7.80001 3.17534 8.21812 2.67705 8.79163 2.57593L21.9916 0.248412C22.6443 0.133328 23.2667 0.56913 23.3818 1.2218C23.3939 1.2906 23.4 1.36032 23.4 1.43018V6.70189L23.3952 19.8906Z"
-          fill="url(#paint0_radial_1236_23)"></path>
-        <defs>
-          <radialGradient
-            id="paint0_radial_1236_23"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(26.4 34.2) rotate(-105.68) scale(35.5218 61.3559)">
-            <stop stop-color="#4EA9F6"></stop>
-            <stop offset="0.421875" stop-color="#658FF8"></stop>
-            <stop offset="1" stop-color="#F86073"></stop>
-          </radialGradient>
-        </defs>
-      </svg>
-      <!-- Music Control Button -->
-  <!-- <button id="musicToggle" aria-label="Toggle music">
-        <svg
-          id="pauseIcon"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M28.3333 6.66666H25C24.0795 6.66666 23.3333 7.41285 23.3333 8.33332V31.6667C23.3333 32.5871 24.0795 33.3333 25 33.3333H28.3333C29.2538 33.3333 30 32.5871 30 31.6667V8.33332C30 7.41285 29.2538 6.66666 28.3333 6.66666Z"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-          <path
-            d="M15 6.66666H11.6667C10.7462 6.66666 10 7.41285 10 8.33332V31.6667C10 32.5871 10.7462 33.3333 11.6667 33.3333H15C15.9205 33.3333 16.6667 32.5871 16.6667 31.6667V8.33332C16.6667 7.41285 15.9205 6.66666 15 6.66666Z"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-        <svg
-          id="playIcon"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M10 5L33.3333 20L10 35V5Z"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-      </button>
-    </div>
-  </div> -->
   <div class="w-full h-[155px] absolute bottom-0 left-0">
     <div class="relative w-full h-full flex justify-center items-center">
       <button id="playButton" class="text-white font-bold z-10 h-full w-[155px]"
@@ -202,12 +96,6 @@
 </style>
 
 <script>
-  // Audio setup
-  //const audio = new Audio("/music/iFollowRivers.mp3");
-  //audio.autoplay = true;
-  //audio.loop = true;
-
-  // Menu functionality
   const menuButton = document.getElementById("menuButton");
   const closeMenu = document.getElementById("closeMenu");
   const menuOverlay = document.getElementById("menuOverlay");
@@ -220,48 +108,8 @@
     menuOverlay?.classList.remove("active");
   });
 
-  // Music functionality
-  // const musicToggle = document.getElementById("musicToggle");
-  // const playIcon = document.getElementById("playIcon");
-  // const pauseIcon = document.getElementById("pauseIcon");
-  // let isPlaying = true;
-
-  // Start playing music when the page loads
-  // window.addEventListener("load", () => {
-  //   audio.play().catch(() => {
-  //     // Handle autoplay restrictions
-  //     isPlaying = false;
-  //     updateMusicIcon();
-  //   });
-  // });
-
-  // musicToggle?.addEventListener("click", () => {
-  //   if (isPlaying) {
-  //     audio.pause();
-  //   } else {
-  //     audio.play();
-  //   }
-  //   isPlaying = !isPlaying;
-  //   updateMusicIcon();
-  // });
-
-  // function updateMusicIcon() {
-  //   if (isPlaying) {
-  //     playIcon?.classList.add("hidden");
-  //     pauseIcon?.classList.remove("hidden");
-  //   } else {
-  //     playIcon?.classList.remove("hidden");
-  //     pauseIcon?.classList.add("hidden");
-  //   }
-  // }
-
-  // Clean up on page unload
-  // window.addEventListener("unload", () => {
-  //   audio.pause();
-  //   audio.src = "";
-  // });
   const playButton = document.getElementById("playButton")!;
-  const audio = new Audio("music/iFollowRivers.mp3"); // Cambia esta ruta
+  const audio = new Audio("music/iFollowRivers.mp3");
   let isPlaying = false;
 
   playButton.addEventListener("click", function () {
